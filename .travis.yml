@@ -9,8 +9,13 @@ before_script:
 - ls -al
 - cd ..
 script:
+- jekyll --version
 - jekyll clean
-- jekyll build
+- jekyll build --future
+- ls -al
+- cd _site
+- ls -al
+- cd archivers
 - ls -al
 - pwd
 after_success:
