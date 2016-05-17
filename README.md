@@ -59,3 +59,5 @@ README: [READ][Travis with jekyll]
 
 
 [Travis with jekyll]: http://nick-dunn.co.uk/blog/jekyll-github-travis-ci-sitting-in-a-tree/
+
+[Travis]: https://travis-ci.org/AsherJia/AsherBlog
