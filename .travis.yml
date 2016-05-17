@@ -11,7 +11,8 @@ before_script:
 script:
 - jekyll clean
 - jekyll build
-- htmlproof ./_site
+- ls -al
+- pwd
 after_success:
 - git clone https://$GITHUB_REPO
 - git branch
