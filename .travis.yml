@@ -2,7 +2,7 @@ language: ruby
 rvm:
 - 2.2
 script:
-- bundle exec jekyll build
+- jekyll build
 after_success:
 - git clone https://$GITHUB_REPO
 - cd $(basename ${GITHUB_REPO%.git})
