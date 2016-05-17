@@ -9,7 +9,9 @@ after_success:
 - git config user.name "Travis CI"
 - git config user.email ${EMAIL}
 # - rsync -az --delete --exclude '.git*' ../_site/ .
-- rm -rf `ls -a | egrep -v _site | egrep -v .git | egrep -v ('..'|'.')`
+- rm -rf `ls | egrep -v _site | egrep -v .git`
+- rm -rf .sass-cache
+- rm -rf .travis.yml
 - mv _site/* .
 - rm -rf _site
 - touch .nojekyll
