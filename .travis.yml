@@ -9,7 +9,9 @@ before_script:
 - ls -al
 - cd ..
 script:
-- bundle exec jekyll build
+- jekyll clean
+- jekyll build
+- htmlproof ./_site
 after_success:
 - git clone https://$GITHUB_REPO
 - git branch
