@@ -22,5 +22,5 @@ after_success:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GITHUB_REPO: git@github.com:AsherJia/AsherBlog.git
+  - GITHUB_REPO: github.com/AsherJia/AsherBlog.git
   - REPO_TARGET_BRANCH: gh-pages
