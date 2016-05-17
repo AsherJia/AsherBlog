@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome"
+title:  "jekyllTravisWithGithubPage"
 date:   2016-05-17 16:34
 categories: jekyll
 permalink: /archivers/jekyllTravisWithGithubPage
