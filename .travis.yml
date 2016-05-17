@@ -1,13 +1,8 @@
-# tell Travis to spin up a ruby 2.2.0 environment
 language: ruby
 rvm:
 - 2.2
-
 script:
 - bundle exec jekyll build
-
-# after building, copy the site into the gh-pages branch
-# and push back to Github
 after_success:
 - git clone https://$GITHUB_REPO
 - cd $(basename ${GITHUB_REPO%.git})
@@ -18,9 +13,10 @@ after_success:
 - git add -A .
 - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
 - git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
-
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - GITHUB_REPO: github.com/AsherJia/AsherBlog.git
   - REPO_TARGET_BRANCH: gh-pages
+  - secure: NBfnfd3nQeHqSj+5/wq/dAKPLG03mOa4+UMTYPTt/2YO4FbZGM5Mcn0jSi8ujKrBjFZ8hjZDcfIYLRVifhaDyS52t95JYhewLM54a0G9FBNKAVNNlOPBKxngbrL0dMKrZ08SWkeks5iYEQRTdDCEnDmH5kiCOZuyyKJTv86ctO166AOZgeYxfGFVqvY1VIrvcE0N12Ubi9aVaSRnWvIzzFY4zYEuvJxHvTT8I7eFv9BewTtMUGsYjyyGRMyvk/A9hsj2zbTWNSyUlR4gTMZ27RdR2XMZmAtxHVf27AqOnKjo+lKxmr0FuSET+0o+OB3e9Yn0gUPVP8vU4TaMRIS5jfhjuw+6K3d/+bq4VHLGVgCRe7jDBysDwUldbi1tno3rPjfzxAV/A1m70DZWZyaFelMMaxRXHe72c8SrTyQmbKpgB9MMMEpz9G+M7kGif11KDv5895hvDyqpMe/SYr19Fj1Uh91et82oz/ibu3hQBtjinb3+8YNn7vZRWU5AcKZ/Y9KcKM7zpOz9YuVIxg3ibIUs6hp9XxG/7FEuILg6IDycqAjQzWpu2KQSZI5z5yklehO3TEtNsFZSErVFA65l8rnIROLhVrvk2WPSbLfJHUuS/bAJ6rr6uTdAuMJHQ6KmlcrYK6CeQHAdW6bQyzKKEDlTzekBmx2zGp3K+svwwXU=
+  - secure: cKFf24XisfnQXfdC1hKzW+tjZhioFVZ5Tg9MTvgcCW2viK9P3F3MEuTv4ueVkU/7nMSkvu7+lpVDptgMA/iuTL2Icfik6B1la8sgYw1d2FN7dow0v+PbxUb0QtimpWGUxinz44sVV+mbQ/CyhgbteT2rPDmOiQkiwhSUCkCtCQqj/f2b+woqzyiZ78yDYrlqEgmD/wtROTzP6Pe3ZwXc1PRyA2hM4jX0d1QlNDBv07CiY5/3DmJ7kSPNrwa/b5A+x8H1Qgv1bTKFE0fQ4ZiTWuY36UQACayO+xU779tWvoaKRfeqbOzJQkqwNxTIaZPH1FN/3mdv+rlkvg3qeJBY28RcMGyHK2gzDcgwqRew2MeiVjNPlya5mfbJXjR0kjQCJVcY8Z/h1tiPChEqxxO8T7DmOKJDzs6c0eYu2SJXJ5ai+V9X02UY8zwx3AMx3uehxHNqwPMtEW664pcVWdjLIaosmJrTSmBHSy8a/gQv4v2AcsQVhQeX+HX/lDcX73A4OkQm1yvI+ZEyMHBy7seNepAZF1DeD81KQQcEuU4YmEUcm2Eev8xt9jhcdhQInttaO5FzAP+s/pHKWY5s0FhjuXvSivIQQt0LVFGYpck7QIpWQuhujpyMNDW0R1JdtzEtfbiqEd8taQM6XT4ZrHowFhBruZeIK/KRNQle+G7Qhd8=
