@@ -5,7 +5,7 @@ before_script:
 - git branch
 - git status
 - ls -al
-- cd _post
+- cd _posts
 - ls -al
 script:
 - bundle exec jekyll build
