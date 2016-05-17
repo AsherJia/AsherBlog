@@ -4,10 +4,10 @@
     <title>Asher Blog</title>
     <description>One or more sentences introducing this blog.
 </description>
-    <link>http://asher.github.io/</link>
-    <atom:link href="http://asher.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 17 May 2016 09:44:26 +0800</pubDate>
-    <lastBuildDate>Tue, 17 May 2016 09:44:26 +0800</lastBuildDate>
+    <link>http://asher.github.io/AsherBlog/</link>
+    <atom:link href="http://asher.github.io/AsherBlog/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 17 May 2016 10:36:51 +0800</pubDate>
+    <lastBuildDate>Tue, 17 May 2016 10:36:51 +0800</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -70,8 +70,8 @@
 
 </description>
         <pubDate>Tue, 30 Dec 2014 17:00:13 +0800</pubDate>
-        <link>http://asher.github.io/archivers/hello</link>
-        <guid isPermaLink="true">http://asher.github.io/archivers/hello</guid>
+        <link>http://asher.github.io/AsherBlog/archivers/hello</link>
+        <guid isPermaLink="true">http://asher.github.io/AsherBlog/archivers/hello</guid>
         
         
         <category>jekyll</category>
@@ -180,8 +180,8 @@
 
 </description>
         <pubDate>Thu, 01 Jan 1970 08:00:00 +0800</pubDate>
-        <link>http://asher.github.io/archivers/test</link>
-        <guid isPermaLink="true">http://asher.github.io/archivers/test</guid>
+        <link>http://asher.github.io/AsherBlog/archivers/test</link>
+        <guid isPermaLink="true">http://asher.github.io/AsherBlog/archivers/test</guid>
         
         
         <category>jekyll</category>
