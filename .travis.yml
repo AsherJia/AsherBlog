@@ -5,6 +5,8 @@ before_script:
 - git branch
 - git status
 - ls -al
+- cd _post
+- ls -al
 script:
 - bundle exec jekyll build
 after_success:
