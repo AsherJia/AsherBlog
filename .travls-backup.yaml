@@ -24,7 +24,6 @@ after_success:
 - pwd
 - git config user.name "Travis CI"
 - git config user.email ${EMAIL}
-- pwd
 - ls -al
 - git add -A
 - git status
