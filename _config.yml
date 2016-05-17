@@ -9,7 +9,7 @@ description: >
 # Your information
 email: asherjia2012@gmail.com
 author: Asher Jia
-avatar: "//www.gravatar.com/avatar/your_email_md5?d=mm&s=135"
+avatar: "https://avatars0.githubusercontent.com/u/19389937?v=3&s=460"
 profile: One sentence introducing yourself.
 #twitter_username: twitter_username
 #github_username:  github_username
@@ -17,7 +17,7 @@ profile: One sentence introducing yourself.
 # Comment Service (Disqus or 多说)
 #  choose one and un-comment the line to active it
 #disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
-#duoshuo_shortname: xxx  # get one: http://duoshuo.com/create-site/
+duoshuo_shortname: asherjia
 
 permalink: /archivers/:title
 gems:
