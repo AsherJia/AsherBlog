@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Jekyll + Github page + Travis"
+title:      "Jekyll + Github pages + Travis"
 subtitle:   "Magic"
 date:       2016-05-18 16:57
 author:     "Asher"
@@ -25,9 +25,9 @@ Jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和W
 一个栗子解释安装：
 
 ```javascript
-gem install jekyll　//　安装jekyll
+gem install jekyll //　安装jekyll
 
-gem jekyll MyBlog　//　新建一个空的Blog模板
+gem jekyll MyBlog //　新建一个空的Blog模板
 
 jekyll server // 根据提示访问站点
 
@@ -43,7 +43,7 @@ jekyll server // 根据提示访问站点
 
 > 找一个自己喜欢的模板进行改造吧～～～
 
-### Github page
+### Github pages
 
 > 之前在网上找了好多资料。。。其实认真看看文档，你就会发现这个其实非常简单。
 > Github中有一个特殊的分支 `gh-pages`　这个分支中的代码github自动用来生成 Github Pages 站点。
@@ -81,7 +81,7 @@ rvm:
 script:
 - jekyll build --future
 after_success:
-- rm -rf `ls -a |egrep -v .git| egrep -v _site`
+- rm -rf &acute;ls -a |egrep -v .git| egrep -v _site&acute;
 - mv _site//* .
 - rm -rf _site
 - ls -al
@@ -90,7 +90,7 @@ after_success:
 - git add -A
 - git status
 - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD: ${REPO_TARGET_BRANCH}
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
@@ -107,7 +107,7 @@ EMAIL以及DEPLOY_KEY是需要用travis来生成的，可以起到保护的作�
 ```javascript
 gem install travis
 
-$ travis encrypt EMAIL=me@domain.com --add
+$ travis encrypt EMAIL=me&amp;domain.com --add
 
 $ travis encrypt DEPLOY_KEY=token --add //这个token需要到github上生成。
 ```
