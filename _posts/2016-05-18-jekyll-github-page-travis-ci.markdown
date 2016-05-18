@@ -81,7 +81,7 @@ rvm:
 script:
 - jekyll build --future
 after_success:
-- rm -rf &acute;ls -a |egrep -v .git| egrep -v _site&acute;
+- rm -rf `ls -a |egrep -v .git| egrep -v _site`
 - mv _site//* .
 - rm -rf _site
 - ls -al
