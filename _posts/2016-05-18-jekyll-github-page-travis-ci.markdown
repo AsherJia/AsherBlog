@@ -116,3 +116,5 @@ $ travis encrypt DEPLOY_KEY=token --add //这个token需要到github上生成。
 
 结束了。。。能看到这篇文章我相信你已经知道我的博客了，哈哈哈～～～
 
+> 一个简单的原因，甚至从逻辑上说不通，但是我的博客因此诞生。
+> Later equals never.
