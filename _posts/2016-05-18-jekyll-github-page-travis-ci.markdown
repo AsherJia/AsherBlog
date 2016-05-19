@@ -8,13 +8,13 @@ header-img: "post-bg-jekyll.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - 前端开发
+    - 平台搭建
 ---
 
 ### 为什么搭建Blog
 
 > 最初的原因是在网上搜索解决方案的时候碰巧看到了一个香港妹子自己的博客
-> [小白妹妹写代码](http://sabrinaluo.com/tech/ "我这么可爱一定是男孩子")。
+> [小白妹妹写代码](http://sabrinaluo.com/tech/ "我这么可爱一定是男孩子"){:target="_blank"}。
 > 风趣幽默的表述让我也有了一个搭建Blog的冲动。
 > 所以一切就此开始。。。
 
@@ -39,7 +39,7 @@ jekyll server // 根据提示访问站点
 
 #### Jekyll themes
 
-新建的模板不是很好看但是简介，初学这可以先用来练手。这里有一个模板的网站[JekyllThemes](http://jekyllthemes.org "Jekyll Theme").
+新建的模板不是很好看但是简介，初学这可以先用来练手。这里有一个模板的网站[JekyllThemes](http://jekyllthemes.org "Jekyll Theme"){:target="_blank"}。
 
 > 找一个自己喜欢的模板进行改造吧～～～
 
@@ -56,7 +56,7 @@ jekyll server // 根据提示访问站点
 > 然后将代码再`push`到`gh-pages`上，　所然过程比较简单。
 > 但是每次都这样也挺烦人的，所以我就想要一个云端的持续构建工具来帮我完成这个工作。
 
-[Travic-ci](https://travis-ci.org/) 的用法也很简单。监听`master`分支当有新的`commit`提交的时候就在云端跑脚本。当然这里所谓的跑脚本就是完成我们安排好的流程。
+[Travic-ci](https://travis-ci.org/){:target="_blank"} 的用法也很简单。监听`master`分支当有新的`commit`提交的时候就在云端跑脚本。当然这里所谓的跑脚本就是完成我们安排好的流程。
 
 再来一个栗子：
 
@@ -114,7 +114,7 @@ $ travis encrypt DEPLOY_KEY=token --add //这个token需要到github上生成。
 
 ----------------------------------------------------------
 
-推荐一篇博文[Jekyll + Github pages + Travis CI, sitting in a tree](http://nick-dunn.co.uk/blog/jekyll-github-travis-ci-sitting-in-a-tree/)，　我在刚开始的时候就是根据这篇文章来学习的。
+推荐一篇博文[Jekyll + Github pages + Travis CI, sitting in a tree](http://nick-dunn.co.uk/blog/jekyll-github-travis-ci-sitting-in-a-tree/){:target="_blank"}，　我在刚开始的时候就是根据这篇文章来学习的。
 
 结束了。。。能看到这篇文章我相信你已经知道我的博客了，哈哈哈～～～
 
