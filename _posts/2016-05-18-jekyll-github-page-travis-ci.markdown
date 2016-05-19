@@ -27,7 +27,7 @@ Jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和W
 ```javascript
 gem install jekyll //　安装jekyll
 
-gem jekyll MyBlog //　新建一个空的Blog模板
+jekyll MyBlog //　新建一个空的Blog模板
 
 jekyll server // 根据提示访问站点
 
@@ -61,7 +61,7 @@ jekyll server // 根据提示访问站点
 再来一个栗子：
 
 ```javascript
-// 首先你要新建一个Gemfile文件来告诉travis在执行脚本钱需要安装哪些文件
+// 首先你要新建一个Gemfile文件来告诉travis在执行脚本钱需要安装哪些文件。
 // 我的Gemfile文件：
 source "https://rubygems.org"
 
@@ -111,6 +111,8 @@ $ travis encrypt EMAIL=me&amp;domain.com --add
 
 $ travis encrypt DEPLOY_KEY=token --add //这个token需要到github上生成。
 ```
+
+----------------------------------------------------------
 
 推荐一篇博文[Jekyll + Github pages + Travis CI, sitting in a tree](http://nick-dunn.co.uk/blog/jekyll-github-travis-ci-sitting-in-a-tree/)，　我在刚开始的时候就是根据这篇文章来学习的。
 
