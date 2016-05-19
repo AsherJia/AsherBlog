@@ -5,7 +5,7 @@ header-img: home-bg.jpg
 email: asherjia@163.com
 description: "开发遇一人白首，则一城终老。"
 keyword: "asher"
-url: "http://asherjia.github.io/"              # your host, for absolute URL
+url: "http://blog.asherjia.com/"              # your host, for absolute URL
 baseurl: ""                          # for example, '/blog' if your blog hosted on 'host/blog'
 qiniuBaseUrl: "http://o7d3ayvg2.bkt.clouddn.com"
 
