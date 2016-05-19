@@ -14,3 +14,8 @@ tags:
 ### 首先是一段MV，　让我们重温一下那个年代。
 
 [![魔兽老了还是我们已经长大了](http://o7d3ayvg2.bkt.clouddn.com/post-wow-old-or-our-old-video.jpg)](http://o7d3ayvg2.bkt.clouddn.com/2626347-1.mp4 "魔兽老了还是我们已经长大了"){:target="_blank"}
+
+##　我的魔兽
+
+> 6月8号我们电影院见。　
+
