@@ -59,60 +59,60 @@ tags:
 
 # Shim/Polyfill
 
-* [ES5 shim](https://github.com/es-shims/es5-shim)
-* [es6-shim](https://github.com/paulmillr/es6-shim)
-* [html5shiv](https://github.com/aFarkas/html5shiv)
-* [core-js](https://github.com/zloirock/core-js)
+* [ES5 shim](https://github.com/es-shims/es5-shim){:target="_blank"}
+* [es6-shim](https://github.com/paulmillr/es6-shim){:target="_blank"}
+* [html5shiv](https://github.com/aFarkas/html5shiv){:target="_blank"}
+* [core-js](https://github.com/zloirock/core-js){:target="_blank"}
 
 
 # 可能是常用的工具库
 
-* [moment](https://github.com/moment/moment)
-* [lodash](https://github.com/lodash/lodash)
-* [highland 流式风格工具库](https://github.com/caolan/highland)
-* [handlebars.js](https://github.com/wycats/handlebars.js)
-* [FileAPI](https://github.com/mailru/FileAPI)
-* [CryptoJS加密库](https://github.com/sytelus/CryptoJS)
-* [Esprima（ECMAScript语法解析）](https://github.com/jquery/esprima)
-* [jison 语法解析器生成器](https://github.com/zaach/jison)
-* [bowser 判断浏览器](https://github.com/ded/bowser)
-* [reqwest（Ajax实现）](https://github.com/ded/reqwest)
-* [superagent](https://github.com/visionmedia/superagent)
-* [es6-promise](https://github.com/stefanpenner/es6-promise)
-* [core-js（各种js pollyfill集合）](https://github.com/zloirock/core-js)
-* [svgo SVG优化工具](https://github.com/svg/svgo)
-* [stateman 前端路由](https://github.com/leeluolee/stateman)
-* [dragdealer](https://github.com/skidding/dragdealer)
-* [pdf.js](https://github.com/mozilla/pdf.js)
-* [filesize.js](https://github.com/avoidwork/filesize.js)
-* [berserkJS](https://github.com/tapir-dream/berserkJS)
-* [umd](https://github.com/umdjs/umd)
-* [requirejs](https://github.com/requirejs/requirejs)
+* [moment](https://github.com/moment/moment){:target="_blank"}
+* [lodash](https://github.com/lodash/lodash){:target="_blank"}
+* [highland 流式风格工具库](https://github.com/caolan/highland){:target="_blank"}
+* [handlebars.js](https://github.com/wycats/handlebars.js){:target="_blank"}
+* [FileAPI](https://github.com/mailru/FileAPI){:target="_blank"}
+* [CryptoJS加密库](https://github.com/sytelus/CryptoJS){:target="_blank"}
+* [Esprima（ECMAScript语法解析）](https://github.com/jquery/esprima){:target="_blank"}
+* [jison 语法解析器生成器](https://github.com/zaach/jison){:target="_blank"}
+* [bowser 判断浏览器](https://github.com/ded/bowser){:target="_blank"}
+* [reqwest（Ajax实现）](https://github.com/ded/reqwest){:target="_blank"}
+* [superagent](https://github.com/visionmedia/superagent){:target="_blank"}
+* [es6-promise](https://github.com/stefanpenner/es6-promise){:target="_blank"}
+* [core-js（各种js pollyfill集合）](https://github.com/zloirock/core-js){:target="_blank"}
+* [svgo SVG优化工具](https://github.com/svg/svgo){:target="_blank"}
+* [stateman 前端路由](https://github.com/leeluolee/stateman){:target="_blank"}
+* [dragdealer](https://github.com/skidding/dragdealer){:target="_blank"}
+* [pdf.js](https://github.com/mozilla/pdf.js){:target="_blank"}
+* [filesize.js](https://github.com/avoidwork/filesize.js){:target="_blank"}
+* [berserkJS](https://github.com/tapir-dream/berserkJS){:target="_blank"}
+* [umd](https://github.com/umdjs/umd){:target="_blank"}
+* [requirejs](https://github.com/requirejs/requirejs){:target="_blank"}
 
 
 # 代码处理工具
 
-* [babel](https://github.com/babel/babel)
-* [traceur-compiler](https://github.com/google/traceur-compiler)
-* [webpack](https://github.com/webpack/webpack)
-* [node-browserify](https://github.com/substack/node-browserify)
-* [amdclean](https://github.com/gfranko/amdclean)
-* [gulp](https://github.com/gulpjs/gulp)
-* [grunt](https://github.com/gruntjs/grunt)
-* [jspm](http://jspm.io/)
-* [rollup.js](http://rollupjs.org/)
+* [babel](https://github.com/babel/babel){:target="_blank"}
+* [traceur-compiler](https://github.com/google/traceur-compiler){:target="_blank"}
+* [webpack](https://github.com/webpack/webpack){:target="_blank"}
+* [node-browserify](https://github.com/substack/node-browserify){:target="_blank"}
+* [amdclean](https://github.com/gfranko/amdclean){:target="_blank"}
+* [gulp](https://github.com/gulpjs/gulp){:target="_blank"}
+* [grunt](https://github.com/gruntjs/grunt){:target="_blank"}
+* [jspm](http://jspm.io/){:target="_blank"}
+* [rollup.js](http://rollupjs.org/){:target="_blank"}
 
 
 # 移动端
 
-* [Swipe](https://github.com/thebird/Swipe)
-* [mobileTech 移动端资源收集](https://github.com/jtyjty99999/mobileTech)
+* [Swipe](https://github.com/thebird/Swipe){:target="_blank"}
+* [mobileTech 移动端资源收集](https://github.com/jtyjty99999/mobileTech){:target="_blank"}
 
 
 # 测试框架和断言库
 
-* [chai](https://github.com/chaijs/chai)
-* [jasmine](https://github.com/jasmine/jasmine)
+* [chai](https://github.com/chaijs/chai){:target="_blank"}
+* [jasmine](https://github.com/jasmine/jasmine){:target="_blank"}
 
 
 * []()
