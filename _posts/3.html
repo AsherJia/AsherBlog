@@ -26,7 +26,6 @@ img2.onload = function(){
 	ctx.drawImage(img2, 0, 200, 100, 100);
 }
 
-
 var img3 = new Image();
 img3.src = '3.jpg';
 img3.onload = function(){
@@ -51,8 +50,26 @@ img6.onload = function(){
 	ctx.drawImage(img6, 200, 400, 100, 100);
 }
 
-
 var record = [];
+var targetRecord = [{
+	x: 0,
+	y: 0
+}, {
+	x: 0,
+	y: 200
+}, {
+	x: 0,
+	y: 400
+}, {
+	x: 200,
+	y: 0
+}, {
+	x: 200,
+	y: 200
+}, {
+	x: 200,
+	y: 400
+}];
 
 document.getElementById('image').addEventListener('mouseup', function(event) {
 	console.log('mouseup ', event.offsetX, event.offsetY);
@@ -61,8 +78,9 @@ document.getElementById('image').addEventListener('mouseup', function(event) {
 		record[record.length - 1].to = {x: event.offsetX, y: event.offsetY };
 	}
 
-	drawLine(record[record.length - 1]);
-	console.log('record: ', record[record.length - 1]);
+	var targetPoint = autoCanculateIntersectingPoint(record[record.length - 1]);
+	drawLine(targetPoint);
+	console.log('record: ', targetPoint);
 });
 
 document.getElementById('image').addEventListener('mousedown', function(event) {
@@ -77,9 +95,30 @@ drawLine = function (record) {
 	ctx.lineWidth = 5;
 	ctx.strokeStyle='#FB0000';
 	ctx.lineCap="round";
-	ctx.moveTo(record.from.x,record.from.y);
-	ctx.lineTo(record.to.x,record.to.y);
+	ctx.moveTo(record.fromPoint.x + 50 ,record.fromPoint.y + 50);
+	ctx.lineTo(record.toPoint.x + 50 ,record.toPoint.y + 50 );
 	ctx.stroke();
+}
+
+autoCanculateIntersectingPoint = function (record) {
+	width = 100;
+	fromPoint = {x:0, y:0};
+	toPoint = {x:0, y:0};
+
+	for (var index=0; index<targetRecord.length; index++) {
+		if (targetRecord[index].x <= record.from.x && record.from.x <= targetRecord[index].x + width &&
+			targetRecord[index].y <= record.from.y && record.from.y <= targetRecord[index].y + width) {
+			fromPoint = {x:targetRecord[index].x, y: targetRecord[index].y};
+		}
+
+		if (targetRecord[index].x <= record.to.x && record.to.x <= targetRecord[index].x + width &&
+			targetRecord[index].y <= record.to.y && record.to.y <= targetRecord[index].y + width) {
+			toPoint = {x:targetRecord[index].x, y: targetRecord[index].y};
+		}
+	}
+
+	return {fromPoint, toPoint}
+
 }
 </script>
 </html>
