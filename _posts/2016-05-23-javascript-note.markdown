@@ -32,3 +32,6 @@ var s2 = 0x0010; 16
 12.3E-32
 
 * javascript 非数字　not-a-number　NaN　跟任何值都不相等，包括自身。
+* x!=x 当且仅当x为NaN的时候返回true.
+* isNaN 如果参数是NaN或者非数字的时候返回true.
+* isFinite 用来检测数字是不是有限的。

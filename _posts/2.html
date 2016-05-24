@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Test</title>
+</head>
+<style type="text/css">
+
+</style>
+<body>
+<canvas id='image' width=800 height=800></canvas>
+</body>
+<script type="text/javascript">
+
+var ctx = document.getElementById("image").getContext('2d');
+
+var img = new Image();
+img.src = '1.jpg';
+img.onload = function(){
+	ctx.drawImage(img, 0, 0, 100, 100);
+}
+
+var img2 = new Image();
+img2.src = '2.jpg';
+img2.onload = function(){
+	ctx.drawImage(img2, 0, 200, 100, 100);
+}
+
+
+var img3 = new Image();
+img3.src = '3.jpg';
+img3.onload = function(){
+	ctx.drawImage(img3, 0, 400, 100, 100);
+}
+
+var img4 = new Image();
+img4.src = '4.jpg';
+img4.onload = function(){
+	ctx.drawImage(img4, 200, 0, 100, 100);
+}
+
+var img5 = new Image();
+img5.src = '5.jpg';
+img5.onload = function(){
+	ctx.drawImage(img5, 200, 200, 100, 100);
+}
+
+var img6 = new Image();
+img6.src = '6.jpg';
+img6.onload = function(){
+	ctx.drawImage(img6, 200, 400, 100, 100);
+}
+
+var record = [];
+
+document.getElementById('image').addEventListener('mouseup', function(event) {
+	console.log('mouseup ', event.offsetX, event.offsetY);
+	
+	if (record.length > 0) {
+		record[record.length - 1].to = {x: event.offsetX, y: event.offsetY };
+	}
+
+	drawLine(record[record.length - 1]);
+	console.log('record: ', record[record.length - 1]);
+});
+
+document.getElementById('image').addEventListener('mousedown', function(event) {
+	console.log('mousedown ', event.offsetX, event.offsetY);
+	record.push({from: {x: event.offsetX, y: event.offsetY}});
+});
+
+drawLine = function (record) {
+	var c=document.getElementById("image");
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.lineWidth = 5;
+	ctx.strokeStyle='#FB0000';
+	ctx.lineCap="round";
+	ctx.moveTo(record.from.x,record.from.y);
+	ctx.lineTo(record.to.x,record.to.y);
+	ctx.stroke();
+}
+</script>
+</html>
