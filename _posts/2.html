@@ -61,7 +61,9 @@ document.getElementById('image').addEventListener('mouseup', function(event) {
 		record[record.length - 1].to = {x: event.offsetX, y: event.offsetY };
 	}
 
-	drawLine(record[record.length - 1]);
+	//drawLine(record[record.length - 1]);
+	
+	console.log('Intersection Collection: ', intersectionCollection);
 	console.log('record: ', record[record.length - 1]);
 });
 
@@ -81,5 +83,19 @@ drawLine = function (record) {
 	ctx.lineTo(record.to.x,record.to.y);
 	ctx.stroke();
 }
+
+var width = 100;
+var intersectionCollection = [
+{ x: 0, y:0 },
+{ x: 0, y:width * 2 },
+{ x: 0, y:width * 4 },
+{ x: width * 2, y:0 },
+{ x: width * 2, y:width * 2 },
+{ x: width * 2, y:width * 4 }];
+
+autoCalculateIntersection = function (record) {
+
+}
+
 </script>
 </html>

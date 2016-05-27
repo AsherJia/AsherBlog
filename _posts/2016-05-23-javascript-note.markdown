@@ -35,3 +35,24 @@ var s2 = 0x0010; 16
 * x!=x 当且仅当x为NaN的时候返回true.
 * isNaN 如果参数是NaN或者非数字的时候返回true.
 * isFinite 用来检测数字是不是有限的。
+
+string 由16位值组成的不可变的有序序列。
+
+boolean:
+
+> undefined null 0 -0 NaN ""  会转化为false
+
+type of null  -> object
+type of '' -> string
+type of undefined -> undefined
+null == undefined -> true
+null === undefined -> false
+
+
+全局属性：　undefined, Infinity, NaN
+全局函数：　isNaN(), parseInt(), eval()
+构造函数：　Date(), RegExp(), String(), Object(), Array()
+全局对象：　Math, JSON
+
+
+http://bonsaiden.github.io/JavaScript-Garden/zh/
