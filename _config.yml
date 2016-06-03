@@ -3,7 +3,7 @@ title: Asher Blog
 SEOTitle: Asher的博客 | Asher Blog
 header-img: home-bg.jpg
 email: asherjia@163.com
-description: "开发遇一人白首，则一城终老。"
+description: "遇一人白首，则一城终老。"
 keyword: "asher"
 url: "http://blog.asherjia.com/"              # your host, for absolute URL
 baseurl: ""                          # for example, '/blog' if your blog hosted on 'host/blog'
@@ -69,7 +69,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "开发遇一人白首，则一城终老。"
+sidebar-about-description: "遇一人白首，则一城终老。"
 sidebar-avatar: avatar-asher.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
