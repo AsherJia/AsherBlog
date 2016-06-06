@@ -55,7 +55,7 @@ tags:
 * [three.js](https://github.com/mrdoob/three.js){:target="_blank"}
 * [stage.js](https://github.com/shakiba/stage.js){:target="_blank"}
 * [html2canvas](https://github.com/niklasvh/html2canvas){:target="_blank"}
-
+* [nprogress](http://ricostacruz.com/nprogress/){:target="_blank"}
 
 # Shim/Polyfill
 
