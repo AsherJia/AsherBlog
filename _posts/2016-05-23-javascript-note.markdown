@@ -54,5 +54,16 @@ null === undefined -> false
 构造函数：　Date(), RegExp(), String(), Object(), Array()
 全局对象：　Math, JSON
 
+Math.floor 返回不大于的最大整数
+Math.round 1=>1 1.5=>2 1.6=>2 -1.5=>1 -1.6=>2
+Math.ceil 返回不小于的最小整数
+
+in运算符
+希望左侧为字符串或者可以转换为字符串。
+右侧是一个对象。
+右侧对象是否包含一个名为左操作数的属性值。
+
+instanceof
+左侧为对象，右侧为标识对象的类
 
 http://bonsaiden.github.io/JavaScript-Garden/zh/

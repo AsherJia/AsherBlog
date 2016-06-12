@@ -96,6 +96,6 @@ src:
 
 # canvas
 ```html
-<canvas id=""></canvas>
+<canvas id="" height="" width=""></canvas>
 
 ```
