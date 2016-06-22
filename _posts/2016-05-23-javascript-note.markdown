@@ -54,9 +54,9 @@ null === undefined -> false
 构造函数：　Date(), RegExp(), String(), Object(), Array()
 全局对象：　Math, JSON
 
-Math.floor 返回不大于的最大整数
+Math.floor 返回小于或等于x，并且与之最接近的整数。 如果x是正数，则把小数“舍”；如果x是负数，则把小数“入”。
 Math.round 1=>1 1.5=>2 1.6=>2 -1.5=>1 -1.6=>2
-Math.ceil 返回不小于的最小整数
+Math.ceil 返回返回大于或等于x，并且与之最接近的整数。 如果x是正数，则把小数“入”；如果x是负数，则把小数“舍”。
 
 in运算符
 希望左侧为字符串或者可以转换为字符串。
@@ -65,5 +65,17 @@ in运算符
 
 instanceof
 左侧为对象，右侧为标识对象的类
+
+
+原型
+
+> It is for example fairly trivial to build a classic model on top of it, while the other
+> is more difficult task.
+
+hasOwnProperty 判断一个对象是否包含自定义属性而不是原型链上的属性。
+
+hasOwnProperty 是 JavaScript 中唯一一个处理属性但是不查找原型链的函数。
+
+
 
 http://bonsaiden.github.io/JavaScript-Garden/zh/
