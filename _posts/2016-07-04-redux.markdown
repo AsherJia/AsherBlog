@@ -55,3 +55,7 @@ https://github.com/happypoulp/redux-tutorial
 https://github.com/gaearon/react-hot-boilerplate
 
 http://www.jchapron.com/2015/08/14/getting-started-with-redux/
+
+http://jaysoo.ca/2016/02/28/organizing-redux-application/
+
+https://github.com/reactjs/reselect
