@@ -17,3 +17,5 @@ tags:
 ## eval
 > 对于eval函数，其执行的时候似乎没有指定当前对象，但实际上其this并非指向windows，因为该函数执行时的作
 > 用域是当前作用域，即等用于在该行将里面的代码填进去。
+
+https://keelii.github.io/2016/07/06/javascript-definitive-guide-note-9/
