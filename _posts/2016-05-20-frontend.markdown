@@ -10,6 +10,7 @@ catalog:    true
 tags:
     - Github
 ---
+http://yaowenjie.github.io/%E7%BC%96%E7%A8%8B%E7%9B%B8%E5%85%B3/using-browser-sync-to-test-in-many-plantforms-synchronously
 
 [慢慢整理](https://segmentfault.com/a/1190000003510001?utm_source=Weibo&utm_medium=shareLink&utm_campaign=socialShare)
 

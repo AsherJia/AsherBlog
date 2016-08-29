@@ -118,3 +118,6 @@ gulp.watch('js/**/*.js', function(event) {
 ## HTML&CSS
 
 * [autoprefixer](https://github.com/postcss/autoprefixer) - parse CSS and add vendor prefixes to rules by Can I Use.
+
+
+http://yaowenjie.github.io/front-end/using-gulp-with-babel
