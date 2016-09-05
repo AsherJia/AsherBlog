@@ -24,5 +24,33 @@ tags:
 ```javascript
 <span>Message: {{ msg }}</span>
 
-<span>Message: {{* msg }}</span> //单次插入
+<span>Message: {{* msg }}</span> // 单次插入
+
+<div>{{{ raw_html }}}</div> // 输出HTML字符串
+
+<div id="item-{{ id }}"></div> // attribute
+
+{{ number + 1 }}
+
+{{ ok ? 'YES' : 'NO' }}
+
+{{ message.split('').reverse().join('') }}
+
+<!-- 完整语法 -->
+<a v-bind:href="url"></a>
+
+<!-- 缩写 -->
+<a :href="url"></a>
+
+<!-- 完整语法 -->
+<button v-bind:disabled="someDynamicCondition">Button</button>
+
+<!-- 缩写 -->
+<button :disabled="someDynamicCondition">Button</button>
+
+<!-- 完整语法 -->
+<a v-on:click="doSomething"></a>
+
+<!-- 缩写 -->
+<a @click="doSomething"></a>
 ```
