@@ -41,15 +41,11 @@ gems: [jekyll-paginate]
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
-#markdown: kramdown
-#kramdown:
-
-
-markdown: redcarpet
-redcarpet:
-    extensions: ["tables"]
-    input: GFM                            # use Github Flavored Markdown !important
-    syntax_highlighter: rouge
+# http://havee.me/internet/2013-10/use-table-with-redcarpet-and-markdown-in-jekyll.html
+markdown: kramdown
+kramdown:
+  input: GFM                            # use Github Flavored Markdown !important
+  syntax_highlighter: rouge
 
 
 # Disqus settings
