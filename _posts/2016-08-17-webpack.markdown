@@ -4,11 +4,92 @@ title:      "webpack"
 subtitle:   "Github"
 date:       2016-05-19 09:30:00
 author:     "Asher"
-header-img: "home-bg.jpg"
+header-img: "webpack-bg.png"
 header-mask: 0.3
 catalog:    true
 tags:
     - Frontend
 ---
 
+### Webpack
+Two core philosophies of Webpack are:
+* Everything is a module — Just like JS files can be “modules”, everything else (CSS, Images, HTML) can also be modules. That is, you can require(“myJSfile.js”) or require(“myCSSfile.css”). This mean we can split any artifact into smaller manageable pieces, reuse them and so on.
+* Load only “what” you need and “when” you need — Typically module bundlers take all the modules and generate a large single output “bundle.js” file. But in many real-world apps, this “bundle.js” could be 10MB-15MB and could take forever to load! So Webpack has various features to split your code and generate multiple “bundle” files, and also load parts of the app asynchronously so that you just load what you need and when you need it.
+
+### Install
+```javascript
+// golbal install
+npm install -g webpack
+
+// install in your local workspace
+npm install --save-dev webpack
+
+// install webpack dev server
+npm install webpack-dev-server --save
+```
+
+### Devtool
+|options | desc|
+|--------|------|
+|source-map|在一个单独的文件中产生一个完整且功能完全的文件。这个文件具有最好的source map，但是它会减慢打包文件的构建速度；|
+|cheap-module-source-map|在一个单独的文件中生成一个不带列映射的map，不带列映射提高项目构建速度，但是也使得浏览器开发者工具只能对应到具体的行，不能对应到具体的列（符号），会对调试造成不便；|
+|eval-source-map|使用eval打包源文件模块，在同一个文件中生成干净的完整的source map。这个选项可以在不影响构建速度的前提下生成完整的sourcemap，但是对打包后输出的JS文件的执行具有性能和安全的隐患。不过在开发阶段这是一个非常好的选项，但是在生产阶段一定不要用这个选项；|
+|cheap-module-eval-source-map|这是在打包文件时最快的生成source map的方法，生成的Source Map 会和打包后的JavaScript文件同行显示，没有列映射，和eval-source-map选项具有相似的缺点；|
+
+### Config
+
+```javascript
+var webapck = require('webpack')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
+
+module.exports = {
+    entry: './src/index.js',
+
+    output: {
+        path: __dirname + '/public',
+        publicPath: '/',
+        filename: 'bundle.js'
+    },
+
+    module: {
+        loaders: [
+            { test: /\.json$/, loader: 'json' },
+            { test: /\.jsx?$/, include: '/public/src', loader: 'babel' },
+            { test: /\.css$/, loader: 'style!css?redules!postcss' }
+        ]
+    },
+
+    resolve: {
+        extensions: ['', '.js', '.jsx']
+    },
+
+    postcss: {
+        require('autoprefixer')
+    },
+
+    plugins: [
+        new HtmlWebpackPlugin{
+            template: './public/index.template.html',
+            inject: true
+        },
+        new webpack.HotModuleReplacementPlugin(),
+    ],
+
+    devtool: 'source-map',
+    devServer: {
+        colors: true,
+        historyApoFailback: true,
+        inLine: true,
+        hot: true,
+        contentBase: './public'
+    }
+
+
+}
+```
+
+
 http://www.jianshu.com/p/42e11515c10f
+
+https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9#.m1an35go2
+https://medium.com/@rajaraodv/why-redux-needs-reducers-to-be-pure-functions-d438c58ae468#.xcb5p2yux
