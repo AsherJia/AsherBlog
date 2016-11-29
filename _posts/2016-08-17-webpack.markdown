@@ -36,7 +36,7 @@ npm install webpack-dev-server --save
 | eval-source-map | 使用eval打包源文件模块，在同一个文件中生成干净的完整的source map。这个选项可以在不影响构建速度的前提下生成完整的sourcemap，但是对打包后输出的JS文件的执行具有性能和安全的隐患。不过在开发阶段这是一个非常好的选项，但是在生产阶段一定不要用这个选项；|
 | cheap-module-eval-source-map | 这是在打包文件时最快的生成source map的方法，生成的Source Map 会和打包后的JavaScript文件同行显示，没有列映射，和eval-source-map选项具有相似的缺点；|
 
-### Config
+# Config
 
 ```javascript
 var webapck = require('webpack')
@@ -55,9 +55,24 @@ module.exports = {
         loaders: [
             { test: /\.json$/, loader: 'json' },
             { test: /\.jsx?$/, include: '/public/src', loader: 'babel' },
-            { test: /\.css$/, loader: 'style!css?redules!postcss' }
+            { test: /\.css$/, loader: 'style!css?redules!postcss' }, // 感叹号的作用在于使同一文件能够使用不同类型的loader
+            { test: /\.png$/, loader: 'url-loader?limit=1024' },
+            { test: /\.png$/, loader: 'url-loader', query: { limit: 1024 } },
+            {
+                test: /\.jsx?$/,
+                exclude: /(node_modules|bower_components)/,
+                loader: 'babel',
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            }
         ]
     },
+
+    //.bablerc
+    // {
+    //  "presets": ["react", "es2015"]
+    // },
 
     resolve: {
         extensions: ['', '.js', '.jsx']
@@ -87,9 +102,97 @@ module.exports = {
 
 }
 ```
+## Loader
+    * test: 匹配loaders所处理文件的拓展名的正则表达式
+    * loader: loader名
+    * include/exclude: 手动添加必须处理或者屏蔽不需要处理的文件
+    * query: 为loaders提供额外的设置选项
+
+## DevServer
+    * contentBase: 默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到“public"目录）
+    * port: 设置默认监听端口，如果省略，默认为”8080“
+    * inline: 设置为true，当源文件改变时会自动刷新页面
+    * colors: 设置为true，使终端输出的文件为彩色的
+    * historyApiFallback: 在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
 
 
+# Plugin
+ ## PostCSS + autoprefixer
+
+ ```javascript
+    module: {
+        loaders: [{ test: /\.css$/, loader: 'style!css?modules!postcss' }]
+    },
+    postcss: [
+        require('autoprefixer')//调用autoprefixer插件
+    ],
+ ```
+
+ ## webpack.BannerPlugin
+
+ > 版权声明插件
+
+ ```javascript
+    new webpack.BannerPlugin("Copyright Flying Unicorns inc.")//在这个数组中new一个就可以了
+ ```
+ ## HtmlWebpackPlugin
+ ```javascript
+    new HtmlWebpackPlugin({
+        template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
+    })
+ ```
+
+ ## Hot Module Replacement
+ ```javascript
+    new webpack.HotModuleReplacementPlugin()//热加载插件
+    devServer: {
+        colors: true,
+        historyApiFallback: true,
+        inline: true,
+        hot: true
+    }
+ ```
+
+ ## OccurenceOrderPlugin
+
+ > 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
+
+ ```javascript
+    new webpack.optimize.OccurenceOrderPlugin()
+ ```
+
+ ## UglifyJsPlugin
+
+ > 压缩JS代码
+
+ ```javascript
+    new webpack.optimize.UglifyJsPlugin()
+ ```
+ ## ExtractTextPlugin
+
+ > 分离CSS和JS文件
+
+ ```javascript
+    new ExtractTextPlugin("style.css")
+ ```
+ # Caching
+
+ > 缓存无处不在，使用缓存的最好方法是保证你的文件名和文件内容是匹配的（内容改变，名称相应改变）
+
+ ```javascript
+ output: {
+   path: __dirname + "/build",
+   filename: "[name]-[hash].js"
+ },
+ plugins: [
+    new ExtractTextPlugin("[name]-[hash].css")
+  ]
+ ```
+http://www.pro-react.com/materials/appendixA/
 http://www.jianshu.com/p/42e11515c10f
 
 https://medium.com/@rajaraodv/webpack-the-confusing-parts-58712f8fcad9#.m1an35go2
 https://medium.com/@rajaraodv/why-redux-needs-reducers-to-be-pure-functions-d438c58ae468#.xcb5p2yux
+https://medium.com/@rajaraodv/webpacks-hmr-react-hot-loader-the-missing-manual-232336dc0d96#.mxeblxujo
+https://medium.com/@rajaraodv/webpack-hot-module-replacement-hmr-e756a726a07#.bsm92y6nd
+https://medium.freecodecamp.com/5-javascript-bad-parts-that-are-fixed-in-es6-c7c45d44fd81#.jtdaohm3n
