@@ -103,17 +103,17 @@ module.exports = {
 }
 ```
 ## Loader
-    > test: 匹配loaders所处理文件的拓展名的正则表达式
-    > loader: loader名
-    > include/exclude: 手动添加必须处理或者屏蔽不需要处理的文件
-    > query: 为loaders提供额外的设置选项
+> test: 匹配loaders所处理文件的拓展名的正则表达式
+> loader: loader名
+> include/exclude: 手动添加必须处理或者屏蔽不需要处理的文件
+> query: 为loaders提供额外的设置选项
 
 ## DevServer
-    > contentBase: 默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到“public"目录）
-    > port: 设置默认监听端口，如果省略，默认为”8080“
-    > inline: 设置为true，当源文件改变时会自动刷新页面
-    > colors: 设置为true，使终端输出的文件为彩色的
-    > historyApiFallback: 在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
+> contentBase: 默认webpack-dev-server会为根文件夹提供本地服务器，如果想为另外一个目录下的文件提供本地服务器，应该在这里设置其所在目录（本例设置到“public"目录）
+> port: 设置默认监听端口，如果省略，默认为”8080“
+> inline: 设置为true，当源文件改变时会自动刷新页面
+> colors: 设置为true，使终端输出的文件为彩色的
+> historyApiFallback: 在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
 
 
 # Plugin
@@ -131,61 +131,61 @@ module.exports = {
 ## webpack.BannerPlugin
 > 版权声明插件
 
-    ```javascript
-        new webpack.BannerPlugin("Copyright Flying Unicorns inc.")//在这个数组中new一个就可以了
-    ```
+```javascript
+    new webpack.BannerPlugin("Copyright Flying Unicorns inc.")//在这个数组中new一个就可以了
+```
 
 ## HtmlWebpackPlugin
-    ```javascript
-        new HtmlWebpackPlugin({
-            template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
-        })
-    ```
+```javascript
+    new HtmlWebpackPlugin({
+        template: __dirname + "/app/index.tmpl.html"//new 一个这个插件的实例，并传入相关的参数
+    })
+```
 
 ## Hot Module Replacement
-    ```javascript
-        new webpack.HotModuleReplacementPlugin()//热加载插件
-        devServer: {
-            colors: true,
-            historyApiFallback: true,
-            inline: true,
-            hot: true
-        }
-    ```
+```javascript
+    new webpack.HotModuleReplacementPlugin()//热加载插件
+    devServer: {
+        colors: true,
+        historyApiFallback: true,
+        inline: true,
+        hot: true
+    }
+```
 
 ## OccurenceOrderPlugin
 > 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
 
-    ```javascript
-        new webpack.optimize.OccurenceOrderPlugin()
-    ```
+```javascript
+    new webpack.optimize.OccurenceOrderPlugin()
+```
 
 ## UglifyJsPlugin
 > 压缩JS代码
 
-     ```javascript
-        new webpack.optimize.UglifyJsPlugin()
-     ```
+ ```javascript
+    new webpack.optimize.UglifyJsPlugin()
+ ```
 
 ## ExtractTextPlugin
 > 分离CSS和JS文件
 
-    ```javascript
-        new ExtractTextPlugin("style.css")
-    ```
+```javascript
+    new ExtractTextPlugin("style.css")
+```
 
  # Caching
 > 缓存无处不在，使用缓存的最好方法是保证你的文件名和文件内容是匹配的（内容改变，名称相应改变）
 
-    ```javascript
-        output: {
-           path: __dirname + "/build",
-           filename: "[name]-[hash].js"
-        },
-        plugins: [
-            new ExtractTextPlugin("[name]-[hash].css")
-        ]
-    ```
+```javascript
+    output: {
+       path: __dirname + "/build",
+       filename: "[name]-[hash].js"
+    },
+    plugins: [
+        new ExtractTextPlugin("[name]-[hash].css")
+    ]
+```
 
 # Code Splitting
 > It’s an opt-in feature. You can define split points in your code base. Webpack takes care of the dependencies, output files and runtime stuff.
