@@ -8,8 +8,7 @@ header-img: "post-bg-e2e-ux.jpg"
 header-mask: 0.3
 catalog:    true
 tags:
-    - 前端开发
-    - H5
+    - CSS
 ---
 
 # Flex 布局
