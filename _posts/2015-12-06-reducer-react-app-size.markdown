@@ -11,6 +11,8 @@ tags:
     - Frontend
 ---
 
+[App](https://medium.com/@rajaraodv/two-quick-ways-to-reduce-react-apps-size-in-production-82226605771a#.qaey3854r){:target="_block"}
+
 If you are building a React + Redux App that has Webpack, then you might have noticed that the size of the final bundle.js (the dev version) for a simple app itself could be 1MB- 2MB!
 For example: Below is a picture from Webpack stats analyzer for the simple react-redux-blog (live). It shows that total size is 1.5MB and 90% (1.2MB) is just libraries in node_modules!
 
