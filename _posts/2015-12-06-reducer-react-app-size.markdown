@@ -8,7 +8,7 @@ header-img: "webpack-bg.png"
 header-mask: 0.3
 catalog:    true
 tags:
-    - Frontend
+    - WebPack
 ---
 
 [App](https://medium.com/@rajaraodv/two-quick-ways-to-reduce-react-apps-size-in-production-82226605771a#.qaey3854r){:target="_block"}
@@ -54,3 +54,4 @@ Minimize all JavaScript output of chunks. Loaders are switched into minimizing m
 You can pass an object containing [UglifyJS options](https://github.com/mishoo/UglifyJS2#usage){:target="_block"}.
 
 > AggressiveMergingPlugin
+A plugin for a more aggressive chunk merging strategy. Even similar chunks are merged if the total size is reduced enough. As an option modules that are not common in these chunks can be moved up the chunk tree to the parents.
