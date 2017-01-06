@@ -15,7 +15,7 @@ tags:
 
 > gulp 是基于 Nodejs 的自动任务运行器，能自动化地完成javascript/coffee/sass/less/html/image/css
 > 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些
-> 步骤。在实现上， gulp 
+> 步骤。在实现上， gulp
 > 借鉴了Unix操作系统的管道（pipe）思想，前一级的输出，直接变成后一级的输入，使得在操作上非常简单.
 
 ![](http://o7d3ayvg2.bkt.clouddn.com/gulp-detail.jpg)
@@ -45,7 +45,7 @@ gulp.task('default', () => {
 ## gulp.src(globs[, options])
 
 > Emits files matching provided glob or an array of globs.
-> Returns a [stream](http://nodejs.org/api/stream.html){:target="_block"} of 
+> Returns a [stream](http://nodejs.org/api/stream.html){:target="_block"} of
 > [Vinyl](https://github.com/gulpjs/vinyl-fs){:target="_block"} files that can be
 > [piped](https://nodejs.org/api/stream.html#stream_readable_pipe_destination_options){:target="_block"} to plugins.
 
@@ -120,4 +120,5 @@ gulp.watch('js/**/*.js', function(event) {
 * [autoprefixer](https://github.com/postcss/autoprefixer) - parse CSS and add vendor prefixes to rules by Can I Use.
 
 
-http://yaowenjie.github.io/front-end/using-gulp-with-babel
+[H1](http://yaowenjie.github.io/front-end/using-gulp-with-babel)
+[H2](https://www.talkingcoder.com/article/6367591948982623481)
