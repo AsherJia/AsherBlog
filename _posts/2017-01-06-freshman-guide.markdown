@@ -13,7 +13,7 @@ tags:
 
 # 前言
 
-本文是[前老大](https://github.com/inetfuture)对工作的一些只要和要求, 我在这里做了一些整理和补充。
+本文是[前老大](https://github.com/inetfuture)对工作的一些指导和要求, 我在这里做了一些整理和补充。
 作为一名开发者首先要做到的是有`责任心`, 其次是`Be Professional!`。
 
 # 必读数据
