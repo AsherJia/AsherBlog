@@ -516,7 +516,6 @@ throw 一个同步异常
 
 `因此记住：永远都是往 then() 中传递函数！`
 
-> 关于更多 promises 的进阶用法，可以参考 [promise protips cheat sheet]()
 
 ### 期待 async/await
 在 “[Taming the asynchronous beast with ES7](https://pouchdb.com/2015/03/05/taming-the-async-beast-with-es7.html)” 中提到的重点，在这篇文章中我探究了 ES7 的 async/await 关键字，以及它们是如何将 promises 更深度的结合入语言。不再会要求我们去编写伪同步的代码（以及一个假的 catch() 函数，虽然像，但是并非是 catch），ES7 将会允许我们使用真正的 try/catch/return 关键字，就像我们在 CS 101 上学的一样。
