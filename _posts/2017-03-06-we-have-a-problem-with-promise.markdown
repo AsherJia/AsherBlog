@@ -527,3 +527,64 @@ throw 一个同步异常
 ES7 的 async/await 的美妙在于，你的错误会被作为语法或者编译器错误提示出来，而不是运行时的 bug。不过就目前而言，了解 promise 可以做什么以及如何在 ES5 与 ES6 中正确的使用它们依然是有必要的。
 
 因此当我意识到，就像 JavaScript: The Good Parts 一样，这篇博文可能只会有非常有限的影响的时候，我希望当你发现其他人在犯同样的错误的时候，你可以将这篇博文提供给他们。因为现在依然有很多同学需要承认: “I have a problem with promises!”
+
+```javascript
+
+// Promise.all is good for executing many promises at once
+Promise.all([
+  promise1,
+  promise2
+]);
+
+// Promise.resolve is good for wrapping synchronous code
+Promise.resolve().then(function () {
+  if (somethingIsNotRight()) {
+    throw new Error("I will be rejected asynchronously!");
+  } else {
+    return "This string will be resolved asynchronously!";
+  }
+});
+
+// execute some promises one after the other.
+// this takes an array of promise factories, i.e.
+// an array of functions that RETURN a promise
+// (not an array of promises themselves; those would execute immediately)
+function sequentialize(promiseFactories) {
+  var chain = Promise.resolve();
+  promiseFactories.forEach(function (promiseFactory) {
+    chain = chain.then(promiseFactory);
+  });
+  return chain;
+}
+
+// Promise.race is good for setting a timeout:
+Promise.race([
+  new Promise(function (resolve, reject) {
+    setTimeout(reject, 10000); // timeout after 10 secs
+  }),
+  doSomethingThatMayTakeAwhile()
+]);
+
+// Promise finally util similar to Q.finally
+// e.g. promise.then(...).catch().then(...).finally(...)
+function finally (promise, cb) {
+  return promise.then(function (res) {
+    var promise2 = cb();
+    if (typeof promise2.then === 'function') {
+      return promise2.then(function () {
+        return res;
+      });
+    }
+    return res;
+  }, function (reason) {
+    var promise2 = cb();
+    if (typeof promise2.then === 'function') {
+      return promise2.then(function () {
+        throw reason;
+      });
+    }
+    throw reason;
+  });
+};
+
+```
