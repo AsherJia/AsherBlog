@@ -1,0 +1,15 @@
+---
+layout:     post
+title:      "Mobx"
+subtitle:   "Mobx"
+date:       2017-03-17
+author:     "Asher"
+header-img: "home-bg.jpg"
+header-mask: 0.3
+catalog:    true
+tags:
+    - Mobx
+---
+
+// https://github.com/sorrycc/blog/issues/3
+// https://github.com/sorrycc/blog/issues/4
