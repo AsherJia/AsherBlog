@@ -15,7 +15,7 @@
 
 /* Monokai Theme from https://github.com/richleland/pygments-css/blob/master/monokai.css */
 
-.highlight pre, pre, .highlight .hll { background-color: #49483e; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
+.highlight pre, pre, .highlight .hll { background-color: #000000; border: 1px solid #ccc; padding: 6px 10px; border-radius: 3px; }
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
 .highlight .k { color: #66d9ef } /* Keyword */
@@ -38,17 +38,17 @@
 .highlight .ld { color: #e6db74 } /* Literal.Date */
 .highlight .m { color: #ae81ff } /* Literal.Number */
 .highlight .s { color: #e6db74 } /* Literal.String */
-.highlight .na { color: #a6e22e } /* Name.Attribute */
+.highlight .na { color: #aaff00 } /* Name.Attribute */
 .highlight .nb { color: #f8f8f2 } /* Name.Builtin */
-.highlight .nc { color: #a6e22e } /* Name.Class */
+.highlight .nc { color: #aaff00 } /* Name.Class */
 .highlight .no { color: #66d9ef } /* Name.Constant */
-.highlight .nd { color: #a6e22e } /* Name.Decorator */
+.highlight .nd { color: #aaff00 } /* Name.Decorator */
 .highlight .ni { color: #f8f8f2 } /* Name.Entity */
-.highlight .ne { color: #a6e22e } /* Name.Exception */
-.highlight .nf { color: #a6e22e } /* Name.Function */
+.highlight .ne { color: #aaff00 } /* Name.Exception */
+.highlight .nf { color: #aaff00 } /* Name.Function */
 .highlight .nl { color: #f8f8f2 } /* Name.Label */
 .highlight .nn { color: #f8f8f2 } /* Name.Namespace */
-.highlight .nx { color: #a6e22e } /* Name.Other */
+.highlight .nx { color: #aaff00 } /* Name.Other */
 .highlight .py { color: #f8f8f2 } /* Name.Property */
 .highlight .nt { color: #f92672 } /* Name.Tag */
 .highlight .nv { color: #f8f8f2 } /* Name.Variable */
@@ -74,8 +74,8 @@
 .highlight .vg { color: #f8f8f2 } /* Name.Variable.Global */
 .highlight .vi { color: #f8f8f2 } /* Name.Variable.Instance */
 .highlight .il { color: #ae81ff } /* Literal.Number.Integer.Long */
-.highlight 
+.highlight
 .highlight .gh { } /* Generic Heading & Diff Header */
 .highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
-.highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
+.highlight .gi { color: #aaff00; } /* Generic.Inserted & Diff Inserted */

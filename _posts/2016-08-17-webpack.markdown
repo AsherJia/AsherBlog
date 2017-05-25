@@ -300,3 +300,8 @@ https://medium.freecodecamp.com/5-javascript-bad-parts-that-are-fixed-in-es6-c7c
 
 
 https://gold.xitu.io/post/5842ea76128fe10058a3b4f0
+
+
+
+
+https://github.com/gwuhaolin/blog/issues/2
