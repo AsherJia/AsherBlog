@@ -20,37 +20,3 @@ tags:
 > Vue.js 自身不是一个全能框架——它只聚焦于视图层。因此它非常容易学习，非常容易与其它库或已有项目整合。另一方面，在与相关工具和支持库一起使用时，Vue.js 也能完美地驱动复杂的单页应用。
 
 ###数据绑定语法
-
-```javascript
-<span>Message: {{ msg }}</span>
-
-<span>Message: {{* msg }}</span> // 单次插入
-
-<div>{{{ raw_html }}}</div> // 输出HTML字符串
-
-<div id="item-{{ id }}"></div> // attribute
-
-{{ number + 1 }}
-
-{{ ok ? 'YES' : 'NO' }}
-
-{{ message.split('').reverse().join('') }}
-
-<!-- 完整语法 -->
-<a v-bind:href="url"></a>
-
-<!-- 缩写 -->
-<a :href="url"></a>
-
-<!-- 完整语法 -->
-<button v-bind:disabled="someDynamicCondition">Button</button>
-
-<!-- 缩写 -->
-<button :disabled="someDynamicCondition">Button</button>
-
-<!-- 完整语法 -->
-<a v-on:click="doSomething"></a>
-
-<!-- 缩写 -->
-<a @click="doSomething"></a>
-```
